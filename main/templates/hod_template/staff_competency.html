@@ -1,0 +1,47 @@
+{% extends 'main/base.html' %}
+{% load static %}
+{% block page_title %}{{page_title}}{% endblock page_title %}
+
+{% block content %}
+
+          <!-- /.card -->
+<div class="card card-default">
+    <div class="card-header"><h3 class="card-title"><b>LIST </b></h3>
+   <div class="table">
+
+       <table class="table table-bordered table-hover">
+           <thead class="thead-dark">
+               <tr>
+                   <th>ID</th>
+                   <th>Staff</th>
+                   <th>Date </th>
+                   <th>Title</th>
+                   <th>Address</th>
+                   <th>Type</th>
+                   <th>Conducted</th>
+                   <th>Level</th>
+                   <th>Learnings</th>
+               </tr>
+           </thead>
+       {% for journal in competencyjournal %}
+           <tr>
+               <td>{{forloop.counter}}</td>
+               <td>{{journal.staff}}</td>
+               <td>{{journal.date |date:"F d,"}}</td>
+               <td>{{journal.title}}</td>
+               <td>{{journal.address}}</td>
+               <td>{{journal.type}}</td>
+               <td>{{journal.conducted}}</td>
+               <td>{{journal.level}}</td>
+               <td>{{journal.learnings}}</td>
+
+           </tr>
+            {% endfor %}
+        </table>
+    </div>
+    </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock content %}

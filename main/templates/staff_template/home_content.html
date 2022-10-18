@@ -1,0 +1,43 @@
+{% extends 'main/base.html' %}
+{% load static %}
+{% block page_title %}{{page_title}}{% endblock page_title %}
+{% block content %}
+
+<section class="content">
+    <div class="container-fluid">
+        <!-- Small boxes (Stat box) -->
+        <div class="row">
+            <!-- ./col -->
+            <div class="col-lg-3 col-6">
+                <!-- small box -->
+                <div class="small-box bg-maroon">
+                    <div class="inner">
+                        <h3>{{total_leave}}</h3>
+
+                        <p>Total Leave Applied</p>
+                    </div>
+                    <div class="icon">
+                      <i class="nav-icon fas fa-sign-out-alt"></i>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-lg-3 col-6">
+                <!-- small box -->
+                <div class="small-box bg-maroon">
+                    <div class="inner">
+                        <h3>{{total_Competency}}</h3>
+
+                        <p>Total Competency</p>
+                    </div>
+                    <div class="icon">
+                      <i class="nav-icon fas fa-sign-out-alt"></i>
+                    </div>
+            </div>
+            <!-- ./col -->
+
+        </div>
+        <!-- /.row -->
+</section>
+{% endblock content %}
